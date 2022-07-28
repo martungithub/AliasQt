@@ -6,12 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>627</width>
-    <height>573</height>
+    <width>637</width>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Frame</string>
+   <string>Alias</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Desktop/Books/alias-logo-1.png</normaloff>../../Desktop/Books/alias-logo-1.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>0.000000000000000</double>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
   </property>
   <widget class="QPushButton" name="play">
    <property name="geometry">
@@ -52,9 +62,23 @@
     <string>Add words</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>611</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rules</string>
+   </property>
+  </widget>
   <zorder>rules</zorder>
   <zorder>play</zorder>
   <zorder>add_words</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>
