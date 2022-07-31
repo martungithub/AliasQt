@@ -6,7 +6,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import sys
 
+from  Second_windows import Ui_choose_window
 class Ui_Frame(object):
+
+    def open_second_window(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_choose_window()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, Frame):
         Frame.setObjectName("Frame")
         Frame.resize(637, 563)
@@ -58,7 +66,6 @@ class Ui_Frame(object):
         self.lineEntry.hide()
         self.add_button.hide()
         self.message_lab.hide()
-        self.w = None
 
     def back_to_main(self):
         self.rules.show()
@@ -113,6 +120,7 @@ class Ui_Frame(object):
             self.message_lab.setText("The word has been inserted. One more?")
 
 
+
     def retranslateUi(self, Frame):
         _translate = QtCore.QCoreApplication.translate
         Frame.setWindowTitle(_translate("Frame", "Alias"))
@@ -126,6 +134,7 @@ class Ui_Frame(object):
         self.back.clicked.connect(self.back_to_main)
         self.add_words.clicked.connect(self.words)
         self.add_button.clicked.connect(self.insert_word)
+        self.play.clicked.connect(self.open_second_window)
         self.label.hide()
         self.label.setGeometry(QtCore.QRect(20, 70, 600, 450))
         # keeping the text of label empty before button get clicked
